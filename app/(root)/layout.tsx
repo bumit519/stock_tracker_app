@@ -1,8 +1,16 @@
-import React from 'react'
+import Header from "@/components/Header";
 
-const Layout = () => {
+export default function RootLayout({
+                                       children,
+                                   }: {
+    children: React.ReactNode;
+}) {
     return (
-        <div>Layout</div>
-    )
+        <html lang="en">
+        <body>
+        <Header />
+        {children}
+        </body>
+        </html>
+    );
 }
-export default Layout
